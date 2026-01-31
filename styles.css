@@ -1,0 +1,422 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --text-color: #333;
+    --light-bg: #f8f9fa;
+    --border-color: #ddd;
+    --link-color: #3498db;
+    --link-hover: #2980b9;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: #fff;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--link-hover);
+}
+
+/* Header */
+header {
+    background-color: #fff;
+    border-bottom: 1px solid var(--border-color);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 1.5em;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.logo h1 a {
+    color: var(--primary-color);
+}
+
+.logo .subtitle {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.logo .subtitle a {
+    color: #666;
+}
+
+/* Desktop Navigation */
+.desktop-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.desktop-nav a {
+    color: var(--text-color);
+    font-size: 0.95em;
+    font-weight: 500;
+    padding: 8px 0;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.desktop-nav a:hover,
+.desktop-nav a.active {
+    color: var(--secondary-color);
+    border-bottom-color: var(--secondary-color);
+}
+
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.mobile-menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--primary-color);
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+/* Mobile Navigation */
+.mobile-nav {
+    display: none;
+    background-color: #fff;
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.mobile-nav.active {
+    display: block;
+}
+
+.mobile-nav ul {
+    list-style: none;
+    padding: 20px;
+}
+
+.mobile-nav li {
+    margin-bottom: 15px;
+}
+
+.mobile-nav a {
+    color: var(--text-color);
+    font-size: 1em;
+    font-weight: 500;
+    display: block;
+    padding: 10px;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Hero Section */
+.hero {
+    padding: 40px 0;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 50px;
+    align-items: start;
+}
+
+.hero h1 {
+    font-size: 2em;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.hero h2 {
+    font-size: 1.2em;
+    color: #555;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.positions {
+    margin-top: 30px;
+}
+
+.positions ul {
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+.positions li {
+    padding: 8px 0;
+    color: var(--text-color);
+    line-height: 1.8;
+}
+
+.affiliations {
+    margin-top: 20px;
+}
+
+.affiliations li {
+    padding: 5px 0;
+    color: #555;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Publications Page */
+.publications-page h1 {
+    font-size: 2em;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.pdf-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+.pdf-item {
+    background: var(--light-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.pdf-item:hover {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
+}
+
+.pdf-icon {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.pdf-item p {
+    font-size: 0.85em;
+    color: var(--text-color);
+    word-wrap: break-word;
+}
+
+.publications-list {
+    margin-top: 40px;
+}
+
+.publications-list p {
+    margin-bottom: 25px;
+    line-height: 1.8;
+}
+
+.publications-list strong {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.publications-list em {
+    font-style: italic;
+}
+
+/* About Page */
+.about-page h1 {
+    font-size: 2em;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.about-text h2 {
+    font-size: 1.4em;
+    color: var(--primary-color);
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.about-text ul {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.about-text li {
+    margin-bottom: 12px;
+    line-height: 1.7;
+}
+
+.cv-download {
+    margin-top: 30px;
+}
+
+.btn-download {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.btn-download:hover {
+    background-color: var(--link-hover);
+    color: #fff;
+}
+
+/* Books and CAP Lab Pages */
+.books-page h1,
+.caplab-page h1 {
+    font-size: 2em;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.books-content,
+.caplab-content {
+    line-height: 1.8;
+}
+
+/* Footer */
+footer {
+    background-color: var(--light-bg);
+    border-top: 1px solid var(--border-color);
+    padding: 30px 20px;
+    text-align: center;
+    margin-top: 60px;
+}
+
+footer p {
+    color: #666;
+    font-size: 0.9em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .desktop-nav {
+        display: none;
+    }
+
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .hero-image {
+        text-align: center;
+    }
+
+    .hero-image img {
+        max-width: 250px;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .pdf-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 15px;
+    }
+
+    .container {
+        padding: 20px 15px;
+    }
+
+    .hero h1 {
+        font-size: 1.6em;
+    }
+
+    .hero h2 {
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo h1 {
+        font-size: 1.2em;
+    }
+
+    .logo .subtitle {
+        font-size: 0.8em;
+    }
+
+    .pdf-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 1.4em;
+    }
+
+    .publications-page h1,
+    .books-page h1,
+    .caplab-page h1,
+    .about-page h1 {
+        font-size: 1.6em;
+    }
+}
