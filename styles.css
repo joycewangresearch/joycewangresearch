@@ -298,11 +298,64 @@ header {
     margin-top: 20px;
 }
 
-.publications-list p {
-    margin-bottom: 18px;
+.publication-item {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #e8e8e8;
+    padding-bottom: 12px;
+}
+
+.publication-item:last-child {
+    border-bottom: none;
+}
+
+.pub-short {
+    margin-bottom: 0;
     line-height: 1.6;
     font-size: 14px;
-    text-align: justify;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.pub-short:hover {
+    color: var(--secondary-color);
+}
+
+.expand-btn {
+    color: var(--link-color);
+    font-size: 12px;
+    font-style: italic;
+    margin-left: 8px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.expand-btn:hover {
+    color: var(--secondary-color);
+}
+
+.pub-apa {
+    display: none;
+    margin-top: 12px;
+    padding: 15px;
+    background-color: var(--light-bg);
+    border-left: 3px solid var(--secondary-color);
+}
+
+.pub-apa.active {
+    display: block;
+}
+
+.pub-apa p:first-child {
+    font-weight: 600;
+    color: var(--secondary-color);
+    margin-bottom: 8px;
+    font-size: 13px;
+}
+
+.pub-apa p:last-child {
+    margin-bottom: 0;
+    line-height: 1.7;
+    font-size: 14px;
 }
 
 .publications-list strong {
