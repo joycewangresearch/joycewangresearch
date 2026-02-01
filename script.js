@@ -49,6 +49,26 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // APA Citation Toggle
 document.addEventListener('DOMContentLoaded', function() {
+    // Handle expand-btn clicks for pub-short/pub-apa structure
+    document.querySelectorAll('.expand-btn').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            const pubItem = this.closest('.publication-item');
+            const apaDiv = pubItem.querySelector('.pub-apa');
+            
+            if (apaDiv) {
+                if (apaDiv.style.display === 'block') {
+                    apaDiv.style.display = 'none';
+                    this.textContent = '[show APA]';
+                } else {
+                    apaDiv.style.display = 'block';
+                    this.textContent = '[hide APA]';
+                }
+            }
+        });
+    });
+    
+    // Legacy support for old apa-toggle buttons if they exist
     const apaToggles = document.querySelectorAll('.apa-toggle');
     
     apaToggles.forEach(toggle => {

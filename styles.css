@@ -18,10 +18,10 @@
 
 body {
     font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, 'Times New Roman', serif;
-    line-height: 1.75;
+    line-height: 1.5;
     color: var(--text-color);
     background-color: var(--light-bg);
-    font-size: 16px;
+    font-size: 14px;
 }
 
 a {
@@ -40,7 +40,7 @@ a:hover {
 header {
     background-color: #fff;
     border-bottom: 3px double var(--border-color);
-    padding: 35px 0 25px 0;
+    padding: 20px 0 15px 0;
     position: relative;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
@@ -56,16 +56,16 @@ header {
 }
 
 .logo {
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     text-align: center;
     width: 100%;
 }
 
 .logo h1 {
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 600;
     color: var(--primary-color);
-    margin-bottom: 8px;
+    margin-bottom: 5px;
     letter-spacing: 0.5px;
     font-variant: small-caps;
 }
@@ -82,10 +82,10 @@ header {
 }
 
 .logo .subtitle {
-    font-size: 16px;
+    font-size: 14px;
     color: var(--text-color);
     font-weight: 400;
-    line-height: 1.6;
+    line-height: 1.4;
     font-style: italic;
 }
 
@@ -203,39 +203,39 @@ header {
 .container {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 50px 40px 80px 40px;
+    padding: 30px 40px 50px 40px;
     background-color: #fff;
     box-shadow: 0 0 20px rgba(0,0,0,0.08);
 }
 
 /* Hero Section */
 .hero {
-    padding: 30px 0;
+    padding: 20px 0;
 }
 
 .hero-content {
     display: grid;
     grid-template-columns: 1fr 320px;
-    gap: 50px;
+    gap: 40px;
     align-items: start;
 }
 
 .hero h1 {
-    font-size: 36px;
+    font-size: 28px;
     color: var(--primary-color);
-    margin-bottom: 12px;
+    margin-bottom: 10px;
     font-weight: 600;
     letter-spacing: 0.5px;
     line-height: 1.3;
     border-bottom: 2px solid var(--secondary-color);
-    padding-bottom: 12px;
+    padding-bottom: 8px;
 }
 
 .hero h2 {
-    font-size: 18px;
+    font-size: 16px;
     color: var(--secondary-color);
     font-weight: 600;
-    margin-bottom: 35px;
+    margin-bottom: 25px;
     letter-spacing: 0.3px;
     font-style: italic;
 }
@@ -246,7 +246,7 @@ header {
 
 .positions ul {
     list-style: none;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     border-left: 3px solid var(--secondary-color);
     padding-left: 20px;
 }
@@ -284,8 +284,8 @@ header {
 }
 
 .publication-item {
-    margin-bottom: 30px;
-    padding-bottom: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
     border-bottom: 1px solid #e0e0e0;
 }
 
@@ -294,9 +294,46 @@ header {
 }
 
 .publication-item p {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
+.pub-short {
+    margin-bottom: 3px;
+}
+
+.expand-btn {
+    color: var(--accent-color);
+    cursor: pointer;
+    font-size: 12px;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.expand-btn:hover {
+    color: var(--secondary-color);
+}
+
+.pub-apa {
+    display: none;
+    background-color: #f5f5f5;
+    border-left: 4px solid var(--accent-color);
+    padding: 10px 15px;
+    margin-top: 8px;
+    border-radius: 4px;
+}
+
+.pub-apa p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.pub-apa p:first-child {
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+/* Legacy support for old button style */
 .apa-toggle {
     background-color: var(--accent-color);
     color: white;
@@ -335,10 +372,10 @@ header {
 
 /* Publications Page */
 .publications-page h1 {
-    font-size: 36px;
+    font-size: 26px;
     color: var(--primary-color);
-    margin-bottom: 35px;
-    padding-bottom: 15px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
     border-bottom: 2px solid var(--secondary-color);
     font-weight: 600;
     letter-spacing: 0.5px;
@@ -380,13 +417,13 @@ header {
 }
 
 .publications-list {
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .publications-list p {
-    margin-bottom: 25px;
-    line-height: 1.85;
-    font-size: 16px;
+    margin-bottom: 15px;
+    line-height: 1.5;
+    font-size: 14px;
     text-align: justify;
 }
 
@@ -412,13 +449,13 @@ header {
 
 /* About Page */
 .about-page h1 {
-    font-size: 36px;
+    font-size: 26px;
     color: var(--primary-color);
-    margin-bottom: 35px;
+    margin-bottom: 20px;
     font-weight: 600;
     letter-spacing: 0.5px;
     border-bottom: 2px solid var(--secondary-color);
-    padding-bottom: 15px;
+    padding-bottom: 10px;
 }
 
 .about-content {
@@ -487,10 +524,10 @@ header {
 /* Books and CAP Lab Pages */
 .books-page h1,
 .caplab-page h1 {
-    font-size: 36px;
+    font-size: 26px;
     color: var(--primary-color);
-    margin-bottom: 35px;
-    padding-bottom: 15px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
     border-bottom: 2px solid var(--secondary-color);
     font-weight: 600;
     letter-spacing: 0.5px;
@@ -498,14 +535,14 @@ header {
 
 .books-content,
 .caplab-content {
-    line-height: 1.85;
-    font-size: 16px;
+    line-height: 1.5;
+    font-size: 14px;
 }
 
 /* Book Entry Styles */
 .book-entry {
-    margin-bottom: 60px;
-    padding-bottom: 60px;
+    margin-bottom: 40px;
+    padding-bottom: 40px;
     border-bottom: 2px solid var(--border-color);
     overflow: auto;
 }
@@ -519,8 +556,8 @@ header {
 .book-image {
     float: left;
     width: 180px;
-    margin-right: 30px;
-    margin-bottom: 20px;
+    margin-right: 25px;
+    margin-bottom: 15px;
 }
 
 .book-image img {
@@ -535,42 +572,44 @@ header {
 }
 
 .book-details h3 {
-    font-size: 24px;
+    font-size: 20px;
     color: var(--primary-color);
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     font-weight: 600;
     line-height: 1.3;
 }
 
 .book-authors {
-    font-size: 16px;
+    font-size: 14px;
     color: var(--text-color);
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     font-style: italic;
 }
 
 .book-details h4 {
-    font-size: 18px;
+    font-size: 16px;
     color: var(--secondary-color);
-    margin-top: 20px;
-    margin-bottom: 10px;
+    margin-top: 15px;
+    margin-bottom: 8px;
     font-weight: 600;
 }
 
 .book-details p {
-    margin-bottom: 15px;
-    line-height: 1.75;
+    margin-bottom: 10px;
+    line-height: 1.5;
 }
 
 .learn-more {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 8px 16px;
     background-color: var(--accent-color);
     color: white !important;
     border-radius: 4px;
-    margin-top: 15px;
+    margin-top: 12px;
     transition: background-color 0.3s ease;
     border-bottom: none !important;
+    font-size: 14px;
+}
 }
 
 .learn-more:hover {
@@ -599,15 +638,15 @@ header {
 footer {
     background-color: var(--light-bg);
     border-top: 3px double var(--border-color);
-    padding: 35px 40px;
+    padding: 20px 40px;
     text-align: center;
-    margin-top: 60px;
+    margin-top: 40px;
     box-shadow: 0 -2px 4px rgba(0,0,0,0.05);
 }
 
 footer p {
     color: var(--text-color);
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 500;
     letter-spacing: 0.3px;
     font-style: italic;
