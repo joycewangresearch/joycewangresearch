@@ -31,30 +31,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-
-    // Publication citation toggle functionality
-    const publicationItems = document.querySelectorAll('.publication-item');
-    
-    publicationItems.forEach(item => {
-        const shortVersion = item.querySelector('.pub-short');
-        const apaVersion = item.querySelector('.pub-apa');
-        const expandBtn = item.querySelector('.expand-btn');
-        
-        if (shortVersion && apaVersion && expandBtn) {
-            // Click on entire short version or just the button
-            shortVersion.addEventListener('click', function(e) {
-                // Toggle the APA citation
-                apaVersion.classList.toggle('active');
-                
-                // Update button text
-                if (apaVersion.classList.contains('active')) {
-                    expandBtn.textContent = '[hide APA]';
-                } else {
-                    expandBtn.textContent = '[show APA]';
-                }
-            });
-        }
-    });
 });
 
 // Smooth scrolling for anchor links
@@ -68,5 +44,29 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 block: 'start'
             });
         }
+    });
+});
+
+// APA Citation Toggle
+document.addEventListener('DOMContentLoaded', function() {
+    const apaToggles = document.querySelectorAll('.apa-toggle');
+    
+    apaToggles.forEach(toggle => {
+        toggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            const citation = this.nextElementSibling;
+            
+            if (citation && citation.classList.contains('apa-citation')) {
+                if (citation.style.display === 'none' || citation.style.display === '') {
+                    citation.style.display = 'block';
+                    this.textContent = 'Hide APA Citation';
+                    this.classList.add('active');
+                } else {
+                    citation.style.display = 'none';
+                    this.textContent = 'Show APA Citation';
+                    this.classList.remove('active');
+                }
+            }
+        });
     });
 });
