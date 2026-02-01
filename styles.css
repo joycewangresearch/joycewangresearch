@@ -22,6 +22,7 @@ body {
     color: var(--text-color);
     background-color: var(--light-bg);
     font-size: 14px;
+    padding-bottom: 70px;
 }
 
 a {
@@ -640,8 +641,12 @@ footer {
     border-top: 3px double var(--border-color);
     padding: 20px 40px;
     text-align: center;
-    margin-top: 40px;
     box-shadow: 0 -2px 4px rgba(0,0,0,0.05);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
 }
 
 footer p {
@@ -650,6 +655,7 @@ footer p {
     font-weight: 500;
     letter-spacing: 0.3px;
     font-style: italic;
+    margin: 0;
 }
 
 /* Responsive Design */
