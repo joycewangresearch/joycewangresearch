@@ -27,7 +27,7 @@ body {
     color: var(--text-color);
     background-color: var(--light-bg);
     font-size: 14px;
-    padding-top: 160px;
+    padding-top: 180px;
     padding-bottom: 70px;
     position: relative;
     min-height: 100vh;
