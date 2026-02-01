@@ -240,6 +240,14 @@ header {
     z-index: 1;
 }
 
+/* Extra top padding for non-index pages to achieve 200px total */
+.publications-page,
+.books-page,
+.about-page,
+.caplab-page {
+    padding-top: 50px;
+}
+
 /* Hero Section */
 .hero {
     padding: 20px 0;
