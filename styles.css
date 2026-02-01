@@ -5,6 +5,11 @@
     box-sizing: border-box;
 }
 
+html {
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+}
+
 :root {
     --primary-color: #1a1a1a;
     --secondary-color: #8b0000;
@@ -24,6 +29,10 @@ body {
     font-size: 14px;
     padding-top: 120px;
     padding-bottom: 70px;
+    position: relative;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 a {
@@ -50,6 +59,10 @@ header {
     z-index: 1000;
     width: 100%;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 .header-content {
@@ -181,6 +194,10 @@ header {
     right: 0;
     z-index: 999;
     width: 100%;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 .mobile-nav.active {
@@ -681,6 +698,10 @@ footer {
     right: 0;
     z-index: 1000;
     width: 100%;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 footer p {
